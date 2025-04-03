@@ -1,4 +1,4 @@
-FROM jenkins/agent:jdk17-latest
+FROM jenkins/agent:alpine-jdk17
 USER root
 RUN apt-get update && apt-get install -y python3 python3-pip
 USER jenkins
