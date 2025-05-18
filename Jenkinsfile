@@ -1,9 +1,13 @@
 pipeline {
+
     agent { 
         node {
             label 'docker-test'
             }
       }
+      triggers {
+                  pollSCM('*/1 * * * *')
+              }
 
     stages {
         stage('Build') {
